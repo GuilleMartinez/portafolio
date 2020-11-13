@@ -2,7 +2,6 @@
 @import "typography";
 @import "colors";
 @import "animations";
-@import "mediaquerys";
 
 /* ---------------------------- Estilo a listas ---------------------------- */
 .socialMedia,
@@ -87,7 +86,7 @@ img {
 }
 
 /* --------------------------- Servicios ------------------------------*/
-.serivceSection {
+.serviceSection {
     height: $grid-row-height;
     justify-content: space-evenly;
 }
@@ -133,18 +132,14 @@ img {
 }
 
 .formContainer {
-    min-height: 50rem;
-    justify-content: space-evenly;
-
     input {
-
-        width: 100%;
-        height: 3.5rem;
         border: 0.101rem solid $main-color;
 
-        &[type="submit"] {
-            width: 50%;
+        &:not(.button) {
+            width: 100%;
+            height: 3.5rem;
         }
+
     }
 
     textarea {
@@ -154,7 +149,7 @@ img {
         resize: none;
     }
 
-    .label {
+    label {
         text-align: left;
     }
 
@@ -166,7 +161,7 @@ img {
 .mapContainer {
 
     iframe {
-        height: 42rem;
+        height: 41rem;
         border: none;
         width: 95%;
     }
@@ -184,8 +179,10 @@ footer {
 
 .socialMedia {
     width: 12rem;
-    
+
     li {
         width: 4rem;
     }
 }
+
+@import "mediaquerys";
