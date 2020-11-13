@@ -18,7 +18,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- My CSS File -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
 </head>
 
@@ -29,10 +29,10 @@
         <div class="row">
 
             <nav class="col-12 navbar navbar-expand-lg justify-content-between">
-                <a href="./index.html" class="navbar-brand"> <img src="./Images/logo.png" alt="Website Logo"
-                        title="Logo"></a>
+                <a aria-label="Home" href="./index.html" class="navbar-brand"> <img src="./Images/logo.png"
+                        alt="Website Logo" title="Logo"></a>
 
-                <button class="navbar-toggler text-center" type="button" data-toggle="collapse"
+                <button class="navbar-toggler text-center" type="button" data-toggle="collapse" aria-label="Menu"
                     data-target="#navbarResponsive">
                     <span class="toggleInfo"> Menu <i class="fas fa-hamburger"></i> </span>
                 </button>
@@ -64,7 +64,7 @@
             </div>
 
             <div class="row mb-4">
-                <h2 class="secondaryTitle col-12 m-0"> Web Designer & Developer</h2>
+                <h2 class="secondaryTitle col-12 m-0"> Web Desiner & Developer</h2>
             </div>
 
             <div class="row">
@@ -94,7 +94,7 @@
                 <div class="grid col-12">
 
                     <figure class="itemGrid project position-relative m-0">
-                        <figcaption class=" projectCaption w-100 position-absolute">
+                        <figcaption class="projectCaption w-100 position-absolute">
                             <h3 class="contentTitle">Timer</h3>
                             <p class="projectDescription mb-2">Simple countdown timer</p>
                             <a class="button" target="_blank" href="https://codepen.io/gamartinez/full/QWNgBjj">See
@@ -157,9 +157,11 @@
 
             <div class="col-6 pr-0 footerSection">
                 <ul class="pl-0 ml-auto mb-0 socialMedia d-flex justify-content-around">
-                    <li><a title="Github" target="_blank" href="https://github.com/GuilleMartinez"> <i
-                                class="fab fa-github-square"></i> </a></li>
-                    <li><a title="Linkedin" href=""> <i class="fab fa-linkedin"></i> </a></li>
+                    <li><a aria-label="Github Profile" title="Github" target="_blank"
+                            href="https://github.com/GuilleMartinez"> <i class="fab fa-github-square"></i> </a></li>
+                    <li><a aria-label="Codpen Profile" title="Codpen" target="_blank"
+                            href="https://codepen.io/gamartinez"> <i class="fab fa-codepen"></i> </a>
+                    </li>
                 </ul>
             </div>
 

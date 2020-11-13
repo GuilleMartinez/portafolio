@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* ---------------------------- TIPOGRAFIAS ---------------------------- */
+p,
+a,
+label,
+input,
+textarea,
+.servicesList,
+.toggleInfo {
+  font-family: "Roboto", sans-serif; }
+
+.mainTitle,
+.secondaryTitle,
+.postTitle a {
+  font-family: "Lato", sans-serif; }
+
+/* ---------------------------- TAMAÑOS DE FUENTE ---------------------------- */
+html {
+  font-size: 62.5%; }
+
+.postContent,
+.projectDescription,
+.author,
+time,
+input,
+textarea {
+  font-size: 1.6rem; }
+
+.button,
+address,
+.label,
+.servicesList {
+  font-size: 2rem; }
+
+.nav-link,
+.toggleInfo {
+  font-size: 2.3rem; }
+
+.socialMedia {
+  font-size: 4rem; }
+
+.contentTitle {
+  font-size: 3rem; }
+
+.secondaryTitle {
+  font-size: 4rem; }
+
+.mainTitle {
+  font-size: 5rem; }
+
+/* ----------- COLORES SECCIONES ----------- */
+body {
+  background-color: snow; }
+
+header,
+footer {
+  background-color: #323330; }
+
+.button {
+  color: snow;
+  background-color: #323330; }
+
+#contactBtn {
+  color: #323330;
+  background-color: #F0DB4F; }
+
+/* ----------- COLORES ENLACES Y FOOTER ----------- */
+a {
+  color: #323330; }
+
+.toggleInfo,
+.nav-link:not(#contactBtn) {
+  text-decoration: underline;
+  text-decoration-color: transparent; }
+
+.author,
+.socialMedia a,
+.nav-link,
+.toggleInfo {
+  color: snow; }
+
+/* ----------- COLORES PROYECTO ----------- */
+.projectCaption {
+  color: snow;
+  background-color: #323330; }
+
+/* ---------------------------- Animaciones ---------------------------- */
+/* Se agregó la pseudoclase :active ya que en celulares no funciona correctamente el :hover */
+/*----- BOTONES Y ENLACES -----*/
+a:hover {
+  color: #323330; }
+
+.toggleInfo:hover, .toggleInfo:active {
+  color: #F0DB4F;
+  text-decoration-color: #F0DB4F;
+  transition: text-decoration-color 0.3s ease-out; }
+
+.button:hover {
+  color: snow;
+  text-decoration: none; }
+
+.buttonAnimated:hover, .buttonAnimated:active {
+  border: none;
+  background-color: #F0DB4F;
+  color: #323330; }
+
+#contactBtn:hover .handWave, #contactBtn:active .handWave {
+  animation-name: sayHi;
+  animation-duration: 0.7s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite; }
+
+@keyframes sayHi {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(35deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+/*----- MENU -----*/
+.nav-link:not(#contactBtn):hover, .nav-link:not(#contactBtn):active {
+  color: #F0DB4F;
+  text-decoration-color: #F0DB4F;
+  transition: text-decoration-color 0.3s ease-out; }
+
+.socialMedia a:hover {
+  color: #F0DB4F; }
+
+/*----- PROYECTOS -----*/
+.project:hover, .project:active {
+  box-shadow: 0 0.2rem 1rem #323330;
+  border: none;
+  transition: all 0.2s ease; }
+
+.project:hover .projectCaption {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0DB4F;
+  color: #323330;
+  transition: background-color 0.3s ease-in; }
+
+.project:hover .contentTitle,
+.project:hover .projectDescription,
+.project:hover .button {
+  display: block; }
+
+.project:hover .contentTitle {
+  margin-bottom: .5rem; }
+
+/* ----------- FORMULARIO ----------- */
+input:not(.button):focus,
+textarea:focus {
+  border: none;
+  background-color: #323330;
+  color: #F0DB4F;
+  transition: background-color 0.3s ease-in-out; }
+
+/* ---------------------------- Media Queries ---------------------------- */
+@media (max-width: 990px) {
+  .navbar-nav {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: 1rem; }
+  .formContainer {
+    margin-bottom: 3rem; }
+    .formContainer .secondaryTitle {
+      margin-bottom: 1.5rem; }
+    .formContainer label {
+      text-align: center; }
+    .formContainer input,
+    .formContainer textarea {
+      width: 75%; } }
+
+@media (max-width: 600px) {
+  .formContainer input,
+  .formContainer textarea,
+  .formContainer input[type="submit"] {
+    width: 95%; }
+  .nav-item {
+    margin-bottom: 1rem; } }
+
+@media (max-width: 375px) {
+  .serviceSection:first-child {
+    margin-bottom: 3rem; }
+  .introButtons .button:first-child {
+    margin-bottom: 1.5rem; }
+  address p {
+    text-align: center; }
+  address .adressIcon {
+    display: none; }
+  .footerRow {
+    flex-direction: column-reverse; }
+    .footerRow .footerSection {
+      text-align: center;
+      max-width: 100%;
+      padding: 0;
+      margin-bottom: 1rem; } }
+
+/* ---------------------------- Estilo a listas ---------------------------- */
+.socialMedia,
+.servicesList {
+  list-style: none; }
+
+/* ---------------------------- Algunas propiedades en común ---------------------------- */
+.button,
+#contactBtn {
+  border-radius: 2rem; }
+
+.button,
+.socialMedia,
+.projectCaption {
+  height: 4rem; }
+
+.button,
+.socialMedia li {
+  line-height: 4rem; }
+
+nav img,
+address {
+  height: 8rem; }
+
+/* ---------------------------- Elementos Genericos ---------------------------- */
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6rem;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 6rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: 35rem;
+  row-gap: 3rem;
+  justify-items: center; }
+
+.itemGrid {
+  width: 30rem; }
+
+.button {
+  width: 16rem;
+  padding: 0 1rem; }
+
+img {
+  object-fit: cover; }
+
+/* ---------------------------- Menu ---------------------------- */
+.navbar {
+  min-height: 6rem;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.navbar-brand {
+  margin: 0; }
+  .navbar-brand img {
+    width: 12rem;
+    height: 6rem; }
+
+.nav-item {
+  width: 15rem; }
+
+/* --------------------------- Servicios ------------------------------*/
+.serivceSection {
+  height: 35rem;
+  justify-content: space-evenly; }
+
+/* ---------------------------- Proyectos ---------------------------- */
+.project {
+  border: 0.101rem solid rgba(0, 0, 0, 0.125); }
+
+.projectCaption {
+  bottom: 0; }
+  .projectCaption .contentTitle {
+    margin-bottom: 0; }
+  .projectCaption .button,
+  .projectCaption .projectDescription {
+    display: none; }
+
+/* ---------------------------- Blog ---------------------------- */
+.post {
+  align-items: center;
+  justify-content: space-between; }
+
+.postContent {
+  text-align: justify;
+  padding: 0 1rem; }
+
+.postImage {
+  order: -1; }
+
+/* ---------------------------- Formulario ---------------------------- */
+.formContainer,
+.mapContainer {
+  min-height: 50rem;
+  justify-content: space-evenly; }
+
+.formContainer {
+  min-height: 50rem;
+  justify-content: space-evenly; }
+  .formContainer input {
+    width: 100%;
+    height: 3.5rem;
+    border: 0.101rem solid #323330; }
+    .formContainer input[type="submit"] {
+      width: 50%; }
+  .formContainer textarea {
+    width: 100%;
+    height: 19rem;
+    border: 0.101rem solid #323330;
+    resize: none; }
+  .formContainer .label {
+    text-align: left; }
+  .formContainer .secondaryTitle {
+    margin-bottom: 0; }
+
+.mapContainer iframe {
+  height: 42rem;
+  border: none;
+  width: 95%; }
+
+.mapContainer address {
+  width: 95%; }
+
+/* ---------------------------- Footer ---------------------------- */
+footer {
+  min-height: 6rem;
+  padding: 1rem 0; }
+
+.socialMedia {
+  width: 12rem; }
+  .socialMedia li {
+    width: 4rem; }

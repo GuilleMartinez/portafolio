@@ -1,0 +1,118 @@
+/* ---------------------------- Animaciones ---------------------------- */
+/* Se agregó la pseudoclase :active ya que en celulares no funciona correctamente el :hover */
+
+/*----- BOTONES Y ENLACES -----*/
+a {
+    &:hover {
+        color: $main-color;
+    }
+}
+
+.toggleInfo {
+    @include menuAnimation;
+}
+
+.button {
+    &:hover {
+        color: $body-color;
+        text-decoration: none;
+    }
+}
+
+.buttonAnimated {
+
+    &:hover,
+    &:active {
+        border: none;
+        background-color: $secondary-color;
+        color: $main-color;
+    }
+}
+
+#contactBtn {
+
+    &:hover,
+    &:active {
+        .handWave {
+            animation-name: sayHi;
+            animation-duration: 0.7s;
+            transform-origin: 70% 70%;
+            animation-iteration-count: infinite;
+
+            @keyframes sayHi {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                50% {
+                    transform: rotate(35deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+
+        }
+    }
+}
+
+
+/*----- MENU -----*/
+.nav-link {
+
+    &:not(#contactBtn) {
+        @include menuAnimation;
+    }
+}
+
+.socialMedia {
+    a {
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+}
+
+/*----- PROYECTOS -----*/
+.project {
+
+    &:hover,
+    &:active {
+        box-shadow: 0 0.2rem 1rem $main-color;
+        border: none;
+        transition: all 0.2s ease;
+    }
+
+    &:hover {
+        .projectCaption {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $secondary-color;
+            color: $main-color;
+            transition: background-color 0.3s ease-in;
+        }
+
+        .contentTitle,
+        .projectDescription,
+        .button {
+            display: block;
+        }
+
+        .contentTitle {
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+
+/* ----------- FORMULARIO ----------- */
+
+input:not(.button),
+textarea {
+    @include inputFocusAnimation;
+}

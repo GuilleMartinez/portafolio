@@ -1,0 +1,47 @@
+$body-color: rgb(255, 250, 250);
+$main-color: #323330;
+$secondary-color: #F0DB4F;
+$border-color: rgba(0, 0, 0, .125);
+
+
+$title-font-family: 'Lato',
+sans-serif;
+$content-font-family: 'Roboto',
+sans-serif;
+
+$content-font-size: 1.6rem;
+$medium-font-size: 2rem;
+$menu-font-size: 2.3rem;
+$content-title-font-size: 3rem;
+$secondary-title-font-size: 4rem;
+$social-icon-font-size: 4rem;
+$main-title-font-size: 5rem;
+
+$grid-item-width: 30rem;
+$grid-row-height: 35rem;
+$grid-row-gap: $grid-item-width / 10;
+
+$section-height: 6rem;
+
+@mixin darkTheme {
+    color: $body-color;
+    background-color: $main-color;
+}
+
+@mixin menuAnimation {
+    &:hover,
+    &:active {
+        color: $secondary-color;
+        text-decoration-color: $secondary-color;
+        transition: text-decoration-color 0.3s ease-out;
+    }
+}
+
+@mixin inputFocusAnimation {
+    &:focus {
+        border: none;
+        background-color: $main-color;
+        color: $secondary-color;
+        transition: background-color 0.3s ease-in-out;
+    }
+}

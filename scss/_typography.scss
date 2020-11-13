@@ -1,0 +1,60 @@
+/* ---------------------------- TIPOGRAFIAS ---------------------------- */
+
+p,
+a,
+label,
+input,
+textarea,
+.servicesList,
+.toggleInfo {
+    font-family: $content-font-family;
+}
+
+.mainTitle,
+.secondaryTitle,
+.postTitle a {
+    font-family: $title-font-family;
+}
+
+/* ---------------------------- TAMAÑOS DE FUENTE ---------------------------- */
+
+html {
+    font-size: 62.5%;
+}
+
+.postContent,
+.projectDescription,
+.author,
+time,
+input,
+textarea {
+    font-size: $content-font-size;
+}
+
+.button,
+address,
+.label,
+.servicesList {
+    font-size: $medium-font-size;
+}
+
+.nav-link,
+.toggleInfo {
+    font-size: $menu-font-size;
+}
+
+.socialMedia {
+    font-size: $social-icon-font-size;
+}
+
+.contentTitle {
+    font-size: $content-title-font-size;
+}
+
+.secondaryTitle {
+    font-size: $secondary-title-font-size;
+}
+
+.mainTitle {
+    font-size: $main-title-font-size;
+}

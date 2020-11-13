@@ -1,0 +1,43 @@
+/* ----------- COLORES SECCIONES ----------- */
+
+body {
+    background-color: $body-color;
+}
+
+header,
+footer {
+    background-color: $main-color;
+}
+
+.button {
+    @include darkTheme;
+}
+
+#contactBtn {
+    color: $main-color;
+    background-color: $secondary-color;
+}
+
+/* ----------- COLORES ENLACES Y FOOTER ----------- */
+a {
+    color: $main-color;
+}
+
+.toggleInfo,
+.nav-link:not(#contactBtn) {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+.author,
+.socialMedia a,
+.nav-link,
+.toggleInfo {
+    color: $body-color;
+}
+
+/* ----------- COLORES PROYECTO ----------- */
+
+.projectCaption {
+    @include darkTheme;
+}

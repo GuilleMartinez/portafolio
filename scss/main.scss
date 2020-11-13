@@ -1,0 +1,191 @@
+@import "variables";
+@import "typography";
+@import "colors";
+@import "animations";
+@import "mediaquerys";
+
+/* ---------------------------- Estilo a listas ---------------------------- */
+.socialMedia,
+.servicesList {
+    list-style: none;
+}
+
+/* ---------------------------- Algunas propiedades en común ---------------------------- */
+.button,
+#contactBtn {
+    border-radius: 2rem;
+}
+
+.button,
+.socialMedia,
+.projectCaption {
+    height: 4rem;
+}
+
+.button,
+.socialMedia li {
+    line-height: 4rem;
+}
+
+nav img,
+address {
+    height: 8rem;
+}
+
+/* ---------------------------- Elementos Genericos ---------------------------- */
+
+main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $section-height;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: $section-height;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($grid-item-width, 1fr));
+    grid-auto-rows: $grid-row-height;
+    row-gap: $grid-row-gap;
+    justify-items: center;
+}
+
+.itemGrid {
+    width: $grid-item-width;
+}
+
+.button {
+    width: 16rem;
+    padding: 0 1rem;
+}
+
+img {
+    object-fit: cover;
+}
+
+/* ---------------------------- Menu ---------------------------- */
+
+.navbar {
+    min-height: $section-height;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    margin: 0;
+
+    img {
+        width: 12rem;
+        height: $section-height;
+    }
+}
+
+.nav-item {
+    width: 15rem;
+}
+
+/* --------------------------- Servicios ------------------------------*/
+.serivceSection {
+    height: $grid-row-height;
+    justify-content: space-evenly;
+}
+
+/* ---------------------------- Proyectos ---------------------------- */
+.project {
+    border: 0.101rem solid $border-color;
+}
+
+.projectCaption {
+    bottom: 0;
+
+    .contentTitle {
+        margin-bottom: 0;
+    }
+
+    .button,
+    .projectDescription {
+        display: none;
+    }
+}
+
+/* ---------------------------- Blog ---------------------------- */
+.post {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postContent {
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.postImage {
+    order: -1;
+}
+
+/* ---------------------------- Formulario ---------------------------- */
+.formContainer,
+.mapContainer {
+    min-height: 50rem;
+    justify-content: space-evenly;
+}
+
+.formContainer {
+    min-height: 50rem;
+    justify-content: space-evenly;
+
+    input {
+
+        width: 100%;
+        height: 3.5rem;
+        border: 0.101rem solid $main-color;
+
+        &[type="submit"] {
+            width: 50%;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 19rem;
+        border: 0.101rem solid $main-color;
+        resize: none;
+    }
+
+    .label {
+        text-align: left;
+    }
+
+    .secondaryTitle {
+        margin-bottom: 0;
+    }
+}
+
+.mapContainer {
+
+    iframe {
+        height: 42rem;
+        border: none;
+        width: 95%;
+    }
+
+    address {
+        width: 95%;
+    }
+}
+
+/* ---------------------------- Footer ---------------------------- */
+footer {
+    min-height: $section-height;
+    padding: 1rem 0;
+}
+
+.socialMedia {
+    width: 12rem;
+    
+    li {
+        width: 4rem;
+    }
+}
