@@ -1,5 +1,4 @@
-/* ---------------------------- Animaciones ---------------------------- */
-/* Se agregó la pseudoclase :active ya que en celulares no funciona correctamente el :hover */
+/* ---------------------------- ANIMACIONES ---------------------------- */
 
 /*----- BOTONES Y ENLACES -----*/
 a {
@@ -112,7 +111,10 @@ a {
 
 /* ----------- FORMULARIO ----------- */
 
-input:not(.button),
-textarea {
-    @include inputFocusAnimation;
+.formContainer {
+
+    input:not(.button),
+    textarea {
+        @include inputFocusAnimation;
+    }
 }

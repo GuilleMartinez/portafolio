@@ -1,7 +1,6 @@
 @import "variables";
 @import "typography";
 @import "colors";
-@import "animations";
 
 /* ---------------------------- Estilo a listas ---------------------------- */
 .socialMedia,
@@ -34,20 +33,15 @@ address {
 /* ---------------------------- Elementos Genericos ---------------------------- */
 
 main {
+    @include displayGrid(1, 1fr, $section-height, true);
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: $section-height;
-    justify-content: center;
     padding-top: 8rem;
     padding-bottom: $section-height;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($grid-item-width, 1fr));
+    @include displayGrid(auto-fit, minmax($grid-item-width, 1fr), $grid-row-gap, true);
     grid-auto-rows: $grid-row-height;
-    row-gap: $grid-row-gap;
     justify-items: center;
 }
 
@@ -137,7 +131,7 @@ img {
 
         &:not(.button) {
             width: 100%;
-            height: 3.5rem;
+            height: 4rem;
         }
 
     }
@@ -185,4 +179,5 @@ footer {
     }
 }
 
+@import "animations";
 @import "mediaquerys";
