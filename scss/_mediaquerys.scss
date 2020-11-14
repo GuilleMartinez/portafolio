@@ -1,4 +1,4 @@
-/* ---------------------------- Media Queries ---------------------------- */
+/* ---------------------------- MEDIA QUERIES ---------------------------- */
 
 @media (max-width: 990px) {
 
@@ -16,7 +16,7 @@
             margin-bottom: 1.5rem;
         }
 
-        .label {
+        label {
             text-align: center;
         }
 
@@ -46,6 +46,7 @@
     }
 
     .introButtons {
+
         .button {
             &:first-child {
                 margin-bottom: 1.5rem;
@@ -61,14 +62,13 @@
         }
     }
 
-    address {
+    .mapContainer {
 
-        p {
-            text-align: center;
-        }
-
-        .adressIcon {
-            display: none;
+        address {
+            
+            .adressIcon {
+                display: none;
+            }
         }
     }
 

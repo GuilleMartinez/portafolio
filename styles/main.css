@@ -16,7 +16,8 @@ textarea,
 
 /* ---------------------------- TAMAÑOS DE FUENTE ---------------------------- */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  word-wrap: break-word; }
 
 .postContent,
 .projectDescription,
@@ -84,81 +85,6 @@ a {
   color: snow;
   background-color: #323330; }
 
-/* ---------------------------- Animaciones ---------------------------- */
-/* Se agregó la pseudoclase :active ya que en celulares no funciona correctamente el :hover */
-/*----- BOTONES Y ENLACES -----*/
-a:hover {
-  color: #323330; }
-
-.toggleInfo:hover, .toggleInfo:active {
-  color: #F0DB4F;
-  text-decoration-color: #F0DB4F;
-  transition: text-decoration-color 0.3s ease-out; }
-
-.button:hover {
-  color: snow;
-  text-decoration: none; }
-
-.buttonAnimated:hover, .buttonAnimated:active {
-  border: none;
-  background-color: #F0DB4F;
-  color: #323330; }
-
-#contactBtn:hover .handWave, #contactBtn:active .handWave {
-  animation-name: sayHi;
-  animation-duration: 0.7s;
-  transform-origin: 70% 70%;
-  animation-iteration-count: infinite; }
-
-@keyframes sayHi {
-  0% {
-    transform: rotate(0deg); }
-  50% {
-    transform: rotate(35deg); }
-  100% {
-    transform: rotate(0deg); } }
-
-/*----- MENU -----*/
-.nav-link:not(#contactBtn):hover, .nav-link:not(#contactBtn):active {
-  color: #F0DB4F;
-  text-decoration-color: #F0DB4F;
-  transition: text-decoration-color 0.3s ease-out; }
-
-.socialMedia a:hover {
-  color: #F0DB4F; }
-
-/*----- PROYECTOS -----*/
-.project:hover, .project:active {
-  box-shadow: 0 0.2rem 1rem #323330;
-  border: none;
-  transition: all 0.2s ease; }
-
-.project:hover .projectCaption {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #F0DB4F;
-  color: #323330;
-  transition: background-color 0.3s ease-in; }
-
-.project:hover .contentTitle,
-.project:hover .projectDescription,
-.project:hover .button {
-  display: block; }
-
-.project:hover .contentTitle {
-  margin-bottom: .5rem; }
-
-/* ----------- FORMULARIO ----------- */
-input:not(.button):focus,
-textarea:focus {
-  border: none;
-  background-color: #323330;
-  color: #F0DB4F;
-  transition: background-color 0.3s ease-in-out; }
-
 /* ---------------------------- Estilo a listas ---------------------------- */
 .socialMedia,
 .servicesList {
@@ -184,19 +110,20 @@ address {
 
 /* ---------------------------- Elementos Genericos ---------------------------- */
 main {
-  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   row-gap: 6rem;
   justify-content: center;
+  min-height: 100vh;
   padding-top: 8rem;
   padding-bottom: 6rem; }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-auto-rows: 35rem;
   row-gap: 3rem;
+  justify-content: center;
+  grid-auto-rows: 35rem;
   justify-items: center; }
 
 .itemGrid {
@@ -263,7 +190,7 @@ img {
   border: 0.101rem solid #323330; }
   .formContainer input:not(.button) {
     width: 100%;
-    height: 3.5rem; }
+    height: 4rem; }
 
 .formContainer textarea {
   width: 100%;
@@ -295,7 +222,81 @@ footer {
   .socialMedia li {
     width: 4rem; }
 
-/* ---------------------------- Media Queries ---------------------------- */
+/* ---------------------------- ANIMACIONES ---------------------------- */
+/*----- BOTONES Y ENLACES -----*/
+a:hover {
+  color: #323330; }
+
+.toggleInfo:hover, .toggleInfo:active {
+  color: #F0DB4F;
+  text-decoration-color: #F0DB4F;
+  transition: text-decoration-color 0.3s ease-out; }
+
+.button:hover {
+  color: snow;
+  text-decoration: none; }
+
+.buttonAnimated:hover, .buttonAnimated:active {
+  border: none;
+  background-color: #F0DB4F;
+  color: #323330; }
+
+#contactBtn:hover .handWave, #contactBtn:active .handWave {
+  animation-name: sayHi;
+  animation-duration: 0.7s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite; }
+
+@keyframes sayHi {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(35deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+/*----- MENU -----*/
+.nav-link:not(#contactBtn):hover, .nav-link:not(#contactBtn):active {
+  color: #F0DB4F;
+  text-decoration-color: #F0DB4F;
+  transition: text-decoration-color 0.3s ease-out; }
+
+.socialMedia a:hover {
+  color: #F0DB4F; }
+
+/*----- PROYECTOS -----*/
+.project:hover, .project:active {
+  box-shadow: 0 0.2rem 1rem #323330;
+  border: none;
+  transition: all 0.2s ease; }
+
+.project:hover .projectCaption {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0DB4F;
+  color: #323330;
+  transition: background-color 0.3s ease-in; }
+
+.project:hover .contentTitle,
+.project:hover .projectDescription,
+.project:hover .button {
+  display: block; }
+
+.project:hover .contentTitle {
+  margin-bottom: .5rem; }
+
+/* ----------- FORMULARIO ----------- */
+.formContainer input:not(.button):focus,
+.formContainer textarea:focus {
+  border: none;
+  background-color: #323330;
+  color: #F0DB4F;
+  transition: background-color 0.3s ease-in-out; }
+
+/* ---------------------------- MEDIA QUERIES ---------------------------- */
 @media (max-width: 990px) {
   .navbar-nav {
     flex-flow: row wrap;
@@ -306,7 +307,7 @@ footer {
     margin-bottom: 3rem; }
     .formContainer .secondaryTitle {
       margin-bottom: 1.5rem; }
-    .formContainer .label {
+    .formContainer label {
       text-align: center; }
     .formContainer input:not(.button),
     .formContainer textarea {
@@ -324,9 +325,7 @@ footer {
   .formContainer input:not(.button),
   .formContainer textarea {
     width: 95%; }
-  address p {
-    text-align: center; }
-  address .adressIcon {
+  .mapContainer address .adressIcon {
     display: none; }
   .footerRow {
     flex-direction: column-reverse; }

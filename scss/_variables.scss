@@ -45,3 +45,12 @@ $section-height: 6rem;
         transition: background-color 0.3s ease-in-out;
     }
 }
+
+@mixin displayGrid ($repeatCount, $columnSize, $row-gap, $justify-center) {
+        display: grid;
+        grid-template-columns: repeat($repeatCount, $columnSize);
+        row-gap: $row-gap;
+        @if $justify-center {
+            justify-content: center;
+        }
+}
