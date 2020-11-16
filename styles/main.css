@@ -104,27 +104,24 @@ a {
 .socialMedia li {
   line-height: 4rem; }
 
-nav img,
-address {
-  height: 8rem; }
-
 /* ---------------------------- Elementos Genericos ---------------------------- */
 main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 6rem;
+  justify-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 6rem; }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   row-gap: 3rem;
+  justify-items: center;
   justify-content: center;
-  grid-auto-rows: 35rem;
-  justify-items: center; }
+  grid-auto-rows: 35rem; }
 
 .itemGrid {
   width: 30rem; }
@@ -138,7 +135,7 @@ img {
 
 /* ---------------------------- Menu ---------------------------- */
 .navbar {
-  min-height: 6rem;
+  min-height: 5rem;
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -146,7 +143,7 @@ img {
   margin: 0; }
   .navbar-brand img {
     width: 12rem;
-    height: 6rem; }
+    height: 5rem; }
 
 .nav-item {
   width: 15rem; }
@@ -189,11 +186,9 @@ img {
 .formContainer input {
   border: 0.101rem solid #323330; }
   .formContainer input:not(.button) {
-    width: 100%;
-    height: 4rem; }
+    height: 4.5rem; }
 
 .formContainer textarea {
-  width: 100%;
   height: 19rem;
   border: 0.101rem solid #323330;
   resize: none; }
@@ -205,17 +200,15 @@ img {
   margin-bottom: 0; }
 
 .mapContainer iframe {
-  height: 41rem;
-  border: none;
-  width: 95%; }
+  height: 40rem;
+  border: none; }
 
 .mapContainer address {
-  width: 95%; }
+  min-height: 5rem; }
 
 /* ---------------------------- Footer ---------------------------- */
-footer {
-  min-height: 6rem;
-  padding: 1rem 0; }
+.footerRow {
+  min-height: 6rem; }
 
 .socialMedia {
   width: 12rem; }
@@ -255,13 +248,13 @@ a:hover {
   100% {
     transform: rotate(0deg); } }
 
-/*----- MENU -----*/
+/*----- MENU Y FOOTER -----*/
 .nav-link:not(#contactBtn):hover, .nav-link:not(#contactBtn):active {
   color: #F0DB4F;
   text-decoration-color: #F0DB4F;
   transition: text-decoration-color 0.3s ease-out; }
 
-.socialMedia a:hover {
+.socialMedia a:hover, .socialMedia a:active {
   color: #F0DB4F; }
 
 /*----- PROYECTOS -----*/
@@ -291,10 +284,11 @@ a:hover {
 /* ----------- FORMULARIO ----------- */
 .formContainer input:not(.button):focus,
 .formContainer textarea:focus {
+  font-size: 2.3rem;
   border: none;
   background-color: #323330;
   color: #F0DB4F;
-  transition: background-color 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 /* ---------------------------- MEDIA QUERIES ---------------------------- */
 @media (max-width: 990px) {
@@ -302,16 +296,15 @@ a:hover {
     flex-flow: row wrap;
     justify-content: space-around;
     padding-bottom: 1rem; }
+  .itemGrid:nth-child(odd):last-child {
+    grid-column: 1 / -1; }
   .formContainer {
     justify-content: initial;
     margin-bottom: 3rem; }
     .formContainer .secondaryTitle {
       margin-bottom: 1.5rem; }
     .formContainer label {
-      text-align: center; }
-    .formContainer input:not(.button),
-    .formContainer textarea {
-      width: 75%; } }
+      text-align: center; } }
 
 @media (max-width: 600px) {
   .nav-item {
@@ -322,15 +315,14 @@ a:hover {
     margin-bottom: 3rem; }
   .introButtons .button:first-child {
     margin-bottom: 1.5rem; }
-  .formContainer input:not(.button),
-  .formContainer textarea {
-    width: 95%; }
   .mapContainer address .adressIcon {
     display: none; }
-  .footerRow {
-    flex-direction: column-reverse; }
-    .footerRow .footerSection {
-      text-align: center;
-      max-width: 100%;
-      padding: 0;
-      margin-bottom: 1rem; } }
+  footer {
+    padding-top: 0.5rem; }
+    footer .footerRow {
+      flex-direction: column-reverse; }
+      footer .footerRow .footerSection {
+        text-align: center;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 1rem; } }

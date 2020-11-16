@@ -22,6 +22,7 @@ $grid-row-height: 35rem;
 $grid-row-gap: $grid-item-width / 10;
 
 $section-height: 6rem;
+$menu-height: 5rem;
 
 @mixin darkTheme {
     color: $body-color;
@@ -39,10 +40,11 @@ $section-height: 6rem;
 
 @mixin inputFocusAnimation {
     &:focus {
+        font-size: $menu-font-size;
         border: none;
         background-color: $main-color;
         color: $secondary-color;
-        transition: background-color 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -51,6 +53,7 @@ $section-height: 6rem;
         grid-template-columns: repeat($repeatCount, $columnSize);
         row-gap: $row-gap;
         @if $justify-center {
+            justify-items: center;
             justify-content: center;
         }
 }
