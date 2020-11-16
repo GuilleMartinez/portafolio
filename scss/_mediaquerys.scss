@@ -8,6 +8,13 @@
         padding-bottom: 1rem;
     }
 
+    .itemGrid {
+
+        &:nth-child(odd):last-child {
+            grid-column: 1 / -1;
+        }
+    }
+
     .formContainer {
         justify-content: initial;
         margin-bottom: 3rem;
@@ -20,10 +27,6 @@
             text-align: center;
         }
 
-        input:not(.button),
-        textarea {
-            width: 75%;
-        }
     }
 
 }
@@ -54,18 +57,10 @@
         }
     }
 
-    .formContainer {
-
-        input:not(.button),
-        textarea {
-            width: 95%;
-        }
-    }
-
     .mapContainer {
 
         address {
-            
+
             .adressIcon {
                 display: none;
             }
@@ -73,14 +68,18 @@
     }
 
 
-    .footerRow {
-        flex-direction: column-reverse;
+    footer {
+        padding-top: 0.5rem;
 
-        .footerSection {
-            text-align: center;
-            max-width: 100%;
-            padding: 0;
-            margin-bottom: 1rem;
+        .footerRow {
+            flex-direction: column-reverse;
+
+            .footerSection {
+                text-align: center;
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 1rem;
+            }
         }
     }
 

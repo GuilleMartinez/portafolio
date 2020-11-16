@@ -25,24 +25,18 @@
     line-height: 4rem;
 }
 
-nav img,
-address {
-    height: 8rem;
-}
-
 /* ---------------------------- Elementos Genericos ---------------------------- */
 
 main {
     @include displayGrid(1, 1fr, $section-height, true);
     min-height: 100vh;
-    padding-top: 8rem;
+    padding-top: $section-height;
     padding-bottom: $section-height;
 }
 
 .grid {
     @include displayGrid(auto-fit, minmax($grid-item-width, 1fr), $grid-row-gap, true);
     grid-auto-rows: $grid-row-height;
-    justify-items: center;
 }
 
 .itemGrid {
@@ -61,7 +55,7 @@ img {
 /* ---------------------------- Menu ---------------------------- */
 
 .navbar {
-    min-height: $section-height;
+    min-height: $menu-height;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -71,7 +65,7 @@ img {
 
     img {
         width: 12rem;
-        height: $section-height;
+        height: $menu-height;
     }
 }
 
@@ -103,6 +97,7 @@ img {
     }
 }
 
+
 /* ---------------------------- Blog ---------------------------- */
 .post {
     align-items: center;
@@ -130,14 +125,12 @@ img {
         border: 0.101rem solid $main-color;
 
         &:not(.button) {
-            width: 100%;
-            height: 4rem;
+            height: 4.5rem;
         }
 
     }
 
     textarea {
-        width: 100%;
         height: 19rem;
         border: 0.101rem solid $main-color;
         resize: none;
@@ -155,21 +148,20 @@ img {
 .mapContainer {
 
     iframe {
-        height: 41rem;
+        height: 40rem;
         border: none;
-        width: 95%;
     }
 
     address {
-        width: 95%;
+        min-height: 5rem;
     }
 }
 
 /* ---------------------------- Footer ---------------------------- */
-footer {
+.footerRow {
     min-height: $section-height;
-    padding: 1rem 0;
 }
+
 
 .socialMedia {
     width: 12rem;

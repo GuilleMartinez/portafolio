@@ -57,7 +57,7 @@ a {
 }
 
 
-/*----- MENU -----*/
+/*----- MENU Y FOOTER -----*/
 .nav-link {
 
     &:not(#contactBtn) {
@@ -67,7 +67,8 @@ a {
 
 .socialMedia {
     a {
-        &:hover {
+        &:hover,
+        &:active {
             color: $secondary-color;
         }
     }
