@@ -30,6 +30,7 @@ $menu-height: 5rem;
 }
 
 @mixin menuAnimation {
+
     &:hover,
     &:active {
         color: $secondary-color;
@@ -49,11 +50,12 @@ $menu-height: 5rem;
 }
 
 @mixin displayGrid ($repeatCount, $columnSize, $row-gap, $justify-center) {
-        display: grid;
-        grid-template-columns: repeat($repeatCount, $columnSize);
-        row-gap: $row-gap;
-        @if $justify-center {
-            justify-items: center;
-            justify-content: center;
-        }
+    display: grid;
+    grid-template-columns: repeat($repeatCount, $columnSize);
+    row-gap: $row-gap;
+
+    @if $justify-center {
+        justify-items: center;
+        justify-content: center;
+    }
 }
