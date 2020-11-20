@@ -60,11 +60,15 @@ img {
     padding-bottom: 0;
 }
 
+.navbar-toggler {
+    width: max-content;
+}
+
 .navbar-brand {
     margin: 0;
 
     img {
-        width: 12rem;
+        width: 8rem;
         height: $menu-height;
     }
 }
@@ -165,6 +169,7 @@ img {
 
 .socialMedia {
     width: 12rem;
+    justify-content: space-around;
 
     li {
         width: 4rem;
